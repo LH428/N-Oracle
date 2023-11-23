@@ -3,38 +3,6 @@
 We use GNY logic to verify the security of the protocol. We introduce the symbols and meanings used in GNY logical reasoning in Table \ref{GNYexp}, and then we prove the security of mutual authentication between User $W$ and Server $R$ in our protocol.
 
 \begin{table}
-    \centering  % 显示位置为中间
-    \caption{GNY expression.}  % 表格标题
-    \label{GNYexp}  % 用于索引表格的标签
-    %字母的个数对应列数，|代表分割线
-    % l代表左对齐，c代表居中，r代表右对齐
-    \begin{tabular}{ll}
-        \toprule % 表格的横线
-        %	& \\[-6pt]  %可以避免文字偏上来调整文字与上边界的距离
-        \textbf{Symbol}                                      & \textbf{Meaning}                                \\  % 表格中的内容，用&分开，\\表示下一行
-        \midrule
-        $(X,Y)$                                              & Conjunction of $X$ and $Y$.                     \\
-        $H_1(X),H_2(X)$                                      & $H_1$ and $H_2$ are one-way functions of $X$.   \\
-        $F(X_1,...,X_n)$                                     & $F$ is a many-to-one computationally            \\ &feasible function for any $X_i$. \\
-        $*X$                                                 & $X$ is a not-originated-here.                   \\
-        $P \triangleleft X$                                  & $P$ is told $X$.                                \\
-        $P \owns X$                                          & $P$ possesses, or is capable of possessing $X$. \\
-        $P \mid\sim X$                                       & $P$ once conveyed $X$.                          \\
-        $P \mid\equiv\sharp (X)$                             & $X$ has not been used for the same              \\ &purpose at any time before the current \\ &run of the protocol. \\
-        $P \mid\equiv\emptyset (X)$                          & $P$ would recognise $X$ if $P$ has certain      \\ & expectations about the content of  $X$  \\ &before actually receiving $X$. \\
-        $P \mid\equiv P \stackrel{K}{\longleftrightarrow} Q$ & $P$ believes that $K$ is a suitable secret      \\ &for $P$ and $Q$. \\
-        $K$                                                  & $K$ is a secret.                                \\
-        $P \mid\equiv Q \mid\Longrightarrow Q \mid\equiv*$   & $P$ believes $Q$ is honest and competent.       \\
-        $P \mid\equiv Q \mid\equiv C$                        & $P$ believes that $Q$ believes in $C$.          \\
-        $X \leadsto C$                                       & The precondition of $X$ being conveyed is $C$.  \\ & $C$ is the message extension of $X$.     \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-\section{GNY logic proof}
-\label{odctpgny}
-We use GNY logic to verify the security of the protocol. We introduce the symbols and meanings used in GNY logical reasoning in Table \ref{GNYexp}, and then we prove the security of mutual authentication between User $W$ and Server $R$ in our protocol.
-
-\begin{table}
    \centering  % 显示位置为中间
    \caption{GNY expression.}  % 表格标题
    \label{GNYexp}  % 用于索引表格的标签
